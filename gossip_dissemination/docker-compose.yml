@@ -1,0 +1,27 @@
+services:
+  node1:
+    build: .
+    environment:
+      - NODE_ID=1
+    volumes:
+      - ./config:/app/config
+    ports:
+      - "5001:5000"
+
+  node2:
+    build: .
+    environment:
+      - NODE_ID=2
+    volumes:
+      - ./config:/app/config
+    ports:
+      - "5002:5000"
+
+  node3:
+    build: .
+    environment:
+      - NODE_ID=3
+    volumes:
+      - ./config:/app/config
+    ports:
+      - "5003:5000"
